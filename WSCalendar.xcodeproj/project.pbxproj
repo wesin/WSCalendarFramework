@@ -10,6 +10,15 @@
 		0AFE50C91B0063AB00D080CC /* WSCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFE50C81B0063AB00D080CC /* WSCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AFE50CF1B0063AB00D080CC /* WSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFE50C31B0063AB00D080CC /* WSCalendar.framework */; };
 		0AFE50D61B0063AC00D080CC /* WSCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE50D51B0063AC00D080CC /* WSCalendarTests.swift */; };
+		0AFE50E91B0063FF00D080CC /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0AFE50DF1B0063FF00D080CC /* DateTools.bundle */; };
+		0AFE50EB1B0063FF00D080CC /* NSDate+WSDateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFE50E11B0063FF00D080CC /* NSDate+WSDateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AFE50EC1B0063FF00D080CC /* NSDate+WSDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE50E21B0063FF00D080CC /* NSDate+WSDateTools.m */; };
+		0AFE50ED1B0063FF00D080CC /* WSCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFE50E31B0063FF00D080CC /* WSCalendar.h */; };
+		0AFE50EE1B0063FF00D080CC /* WSCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE50E41B0063FF00D080CC /* WSCalendarCell.swift */; };
+		0AFE50EF1B0063FF00D080CC /* WSCalendarDayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE50E51B0063FF00D080CC /* WSCalendarDayHeaderView.swift */; };
+		0AFE50F01B0063FF00D080CC /* WSCalendarHearderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE50E61B0063FF00D080CC /* WSCalendarHearderView.swift */; };
+		0AFE50F11B0063FF00D080CC /* WSCalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE50E71B0063FF00D080CC /* WSCalendarItem.swift */; };
+		0AFE50F21B0063FF00D080CC /* WSCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE50E81B0063FF00D080CC /* WSCalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +38,16 @@
 		0AFE50CE1B0063AB00D080CC /* WSCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WSCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFE50D41B0063AC00D080CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AFE50D51B0063AC00D080CC /* WSCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSCalendarTests.swift; sourceTree = "<group>"; };
+		0AFE50DF1B0063FF00D080CC /* DateTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DateTools.bundle; sourceTree = "<group>"; };
+		0AFE50E01B0063FF00D080CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AFE50E11B0063FF00D080CC /* NSDate+WSDateTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WSDateTools.h"; sourceTree = "<group>"; };
+		0AFE50E21B0063FF00D080CC /* NSDate+WSDateTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WSDateTools.m"; sourceTree = "<group>"; };
+		0AFE50E31B0063FF00D080CC /* WSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCalendar.h; sourceTree = "<group>"; };
+		0AFE50E41B0063FF00D080CC /* WSCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarCell.swift; sourceTree = "<group>"; };
+		0AFE50E51B0063FF00D080CC /* WSCalendarDayHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarDayHeaderView.swift; sourceTree = "<group>"; };
+		0AFE50E61B0063FF00D080CC /* WSCalendarHearderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarHearderView.swift; sourceTree = "<group>"; };
+		0AFE50E71B0063FF00D080CC /* WSCalendarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarItem.swift; sourceTree = "<group>"; };
+		0AFE50E81B0063FF00D080CC /* WSCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +90,16 @@
 		0AFE50C51B0063AB00D080CC /* WSCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				0AFE50DF1B0063FF00D080CC /* DateTools.bundle */,
+				0AFE50E01B0063FF00D080CC /* Info.plist */,
+				0AFE50E11B0063FF00D080CC /* NSDate+WSDateTools.h */,
+				0AFE50E21B0063FF00D080CC /* NSDate+WSDateTools.m */,
+				0AFE50E31B0063FF00D080CC /* WSCalendar.h */,
+				0AFE50E41B0063FF00D080CC /* WSCalendarCell.swift */,
+				0AFE50E51B0063FF00D080CC /* WSCalendarDayHeaderView.swift */,
+				0AFE50E61B0063FF00D080CC /* WSCalendarHearderView.swift */,
+				0AFE50E71B0063FF00D080CC /* WSCalendarItem.swift */,
+				0AFE50E81B0063FF00D080CC /* WSCalendarView.swift */,
 				0AFE50C81B0063AB00D080CC /* WSCalendar.h */,
 				0AFE50C61B0063AB00D080CC /* Supporting Files */,
 			);
@@ -110,6 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFE50C91B0063AB00D080CC /* WSCalendar.h in Headers */,
+				0AFE50EB1B0063FF00D080CC /* NSDate+WSDateTools.h in Headers */,
+				0AFE50ED1B0063FF00D080CC /* WSCalendar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFE50E91B0063FF00D080CC /* DateTools.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFE50F11B0063FF00D080CC /* WSCalendarItem.swift in Sources */,
+				0AFE50F01B0063FF00D080CC /* WSCalendarHearderView.swift in Sources */,
+				0AFE50EF1B0063FF00D080CC /* WSCalendarDayHeaderView.swift in Sources */,
+				0AFE50EC1B0063FF00D080CC /* NSDate+WSDateTools.m in Sources */,
+				0AFE50F21B0063FF00D080CC /* WSCalendarView.swift in Sources */,
+				0AFE50EE1B0063FF00D080CC /* WSCalendarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
