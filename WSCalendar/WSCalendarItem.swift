@@ -9,7 +9,7 @@
 import UIKit
 
 protocol WSCalendarItemDelegate:class {
-    func didSelectItem()
+    func didSelectItem(cellType:CalendarType)
     func changeMode(type:CalendarType?)
     func scrollTo(isNext:Bool)
 }
@@ -209,12 +209,14 @@ class WSCalendarItem: UICollectionViewCell,UICollectionViewDataSource,UICollecti
         case .Month:
             if curSelectMonth?.year() == currentDate.year() && curSelectMonth?.month() == index + 1 {
                 cell?.setSelect(true)
+                collectionView.selectItemAtIndexPath(indexPath, animated: false, scrollPosition: .CenteredHorizontally)
             }
             cell?.setContent("\(index + 1)月")
         case .Year:
             let curYear = currentDate.year() + indexPath.row
             if curSelectYear?.year() == curYear {
                 cell?.setSelect(true)
+                collectionView.selectItemAtIndexPath(indexPath, animated: false, scrollPosition: .CenteredHorizontally)
             }
             cell?.setContent("\(curYear)年")
         }
@@ -256,6 +258,7 @@ class WSCalendarItem: UICollectionViewCell,UICollectionViewDataSource,UICollecti
             curSelectDate = cell.currentDay!
             curSelectMonth = curSelectDate
             curSelectYear = curSelectDate
+            delegate?.didSelectItem(dayType)
             if curSelectDate?.month() != currentDate.month() && curSelectDate?.daysFrom(currentDate) > 0 {
                 delegate?.scrollTo(true)
                 return
@@ -268,11 +271,11 @@ class WSCalendarItem: UICollectionViewCell,UICollectionViewDataSource,UICollecti
             curSelectMonth = currentDate.dateByAddingMonths(indexPath.row - currentDate.month() + 1)
             curSelectYear = curSelectMonth
             delegate?.changeMode(.Day)
-            delegate?.didSelectItem()
+            delegate?.didSelectItem(dayType)
         case .Year:
             curSelectYear = currentDate.dateByAddingYears(indexPath.row)
             delegate?.changeMode(.Month)
-            delegate?.didSelectItem()
+            delegate?.didSelectItem(dayType)
         }
     }
     

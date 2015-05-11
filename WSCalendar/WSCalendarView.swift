@@ -171,12 +171,12 @@ public class WSCalendarView: UIView,UICollectionViewDataSource,UICollectionViewD
     :param: fromMode    <#fromMode description#>
     */
     func changeShowType(destModeStr:CalendarType, fromMode:CalendarType? = nil) {
-        showMode = destModeStr
         switch destModeStr {
         case .Month:
             if getCalendarMode == .Year {
                 return
             }
+            showMode = destModeStr
             var index = 0
             if fromMode == nil {
                 index = curSelectYear!.yearsFrom(beginDate)
@@ -191,11 +191,13 @@ public class WSCalendarView: UIView,UICollectionViewDataSource,UICollectionViewD
             if getCalendarMode == .Month {
                 return
             }
+            showMode = destModeStr
             collectView?.reloadData()
             let index = curSelectMonth!.monthsFrom(beginDate)
             collectView?.scrollToItemAtIndexPath(NSIndexPath(forRow: 0, inSection: index), atScrollPosition: .CenteredHorizontally, animated: false)
             return
         case .Year:
+            showMode = destModeStr
             let index = Int(currentSection / (yearPerCount * yearPerCount))
             collectView?.reloadData()
             collectView?.scrollToItemAtIndexPath(NSIndexPath(forRow: 0, inSection: index), atScrollPosition: .CenteredHorizontally, animated: false)
@@ -220,14 +222,16 @@ public class WSCalendarView: UIView,UICollectionViewDataSource,UICollectionViewD
         }
     }
     
-    func didSelectItem() {
-        switch getCalendarMode {
-        case .Day:
-            delegate?.WSCalendarDidSelectDate(self, date: curSelectDate!)
-        case .Month:
-            delegate?.WSCalendarDidSelectDate(self, date: curSelectMonth!)
-        case .Year:
-            delegate?.WSCalendarDidSelectDate(self, date: curSelectYear!)
+    func didSelectItem(cellType:CalendarType) {
+        if cellType == getCalendarMode {
+            switch getCalendarMode {
+            case .Day:
+                delegate?.WSCalendarDidSelectDate(self, date: curSelectDate!)
+            case .Month:
+                delegate?.WSCalendarDidSelectDate(self, date: curSelectMonth!)
+            case .Year:
+                delegate?.WSCalendarDidSelectDate(self, date: curSelectYear!)
+            }
         }
     }
     
