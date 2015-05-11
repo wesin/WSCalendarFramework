@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSDate+WSDateTools.h"
 
 //! Project version number for WSCalendar.
 FOUNDATION_EXPORT double WSCalendarVersionNumber;
